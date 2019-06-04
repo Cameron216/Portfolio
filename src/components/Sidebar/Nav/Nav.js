@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import "./Nav.scss";
 
@@ -8,25 +8,25 @@ function Nav() {
         <nav>
             <ul>
                 <li>
-                    <Link to="/">Home</Link>
+                    <NavLink exact={true} to="/">Home</NavLink>
                 </li>
                 <li>
-                    <Link to="/about/">About</Link>
+                    <NavLink to="/about/">About</NavLink>
                 </li>
                 <li>
-                    <Link to="/skills/">Skills</Link>
+                    <NavLink to="/skills/">Skills</NavLink>
                 </li>
                 <li>
-                    <Link to="/portfolio/">Portfolio</Link>
+                    <NavLink to="/portfolio/">Portfolio</NavLink>
                 </li>
                 <li>
-                    <Link to="/cv/">CV</Link>
+                    <NavLink to="/cv/">CV</NavLink>
                 </li>
                 <li>
-                    <Link to="/blog/">Blog</Link>
+                    <NavLink to="/blog/">Blog</NavLink>
                 </li>
                 <li>
-                    <Link to="/contact/">Contact</Link>
+                    <NavLink to="/contact/">Contact</NavLink>
                 </li>
             </ul>
         </nav>

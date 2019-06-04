@@ -7,23 +7,37 @@
     color: #F5ECD5;
     background-color: #3E3B42;
     text-align: center;
+
+    #profile-picture {
+        display: block;
+        width: 120px;
+        height: 120px;
+        margin: 40px auto 0 auto;
+        border-radius: 50%;
+        box-shadow: 0 6px 8px 1px #F5ECD5;
+    }
+
+    .sidebar-header {
+        font-size: 1.85em;
+        font-weight: 700;
+    }
+
+    .sidebar-subheader { 
+        font-size: 1.25em;
+        margin-top: -1.4em;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 48vh;
+        left: 350px;
+        width: 0;
+        height: 0;
+        border-bottom: 18px solid transparent;
+        border-left: 18px solid #3E3B42;
+        border-top: 18px solid transparent;
+        clear: both;
+    }
 }
 
-#profile-picture {
-    display: block;
-    width: 100px;
-    height: 100px;
-    margin: 0 auto;
-}
-
-#sidebar-container::after{
-    content: '';
-    position: absolute;
-    left: 350px;
-    width: 0;
-    height: 0;
-    border-bottom: 18px solid transparent;
-    border-left: 18px solid #3E3B42;
-    border-top: 18px solid transparent;
-    clear: both;
-}

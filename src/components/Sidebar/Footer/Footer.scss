@@ -1,21 +1,29 @@
 footer {
-    font-size: 0.7em;
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
 
     .social-icons {
-        display: flex;
-        justify-content: space-evenly;
+        font-size: 0.65em;
 
         a {
+            margin: 0 1em;
             color: #F5ECD5;
+
+            &:hover {
+                color: #92A784;
+                
+                svg {
+                    transform: scale(1.2, 1.2);
+                    transition: transform 0.5s ease;
+                }
+            }
         }
     }
 
     .copyright {
-
+        font-size: 0.7em;
         a {
             color: #F5ECD5;
             text-decoration: none;

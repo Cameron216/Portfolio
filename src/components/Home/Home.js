@@ -4,6 +4,10 @@ import './Home.scss';
 
 export default function Home() {
     return (
-        <h1>Home page</h1>
+        <div className="home-container">
+           <p>Hi...</p>
+           <p>I'm Cameron Bailey</p>
+           <p>And I'm a Frontend Developer</p>
+        </div>
     )
 }
