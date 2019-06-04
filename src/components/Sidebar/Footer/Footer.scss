@@ -1,0 +1,30 @@
+footer {
+    font-size: 0.7em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    .social-icons {
+        display: flex;
+        justify-content: space-evenly;
+
+        a {
+            color: #F5ECD5;
+        }
+    }
+
+    .copyright {
+
+        a {
+            color: #F5ECD5;
+            text-decoration: none;
+        
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        
+    }
+}
+

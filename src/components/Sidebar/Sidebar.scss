@@ -1,5 +1,29 @@
+#sidebar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 350px;
+    min-height: 100vh;
+    color: #F5ECD5;
+    background-color: #3E3B42;
+    text-align: center;
+}
+
 #profile-picture {
     display: block;
     width: 100px;
     height: 100px;
+    margin: 0 auto;
+}
+
+#sidebar-container::after{
+    content: '';
+    position: absolute;
+    left: 350px;
+    width: 0;
+    height: 0;
+    border-bottom: 18px solid transparent;
+    border-left: 18px solid #3E3B42;
+    border-top: 18px solid transparent;
+    clear: both;
 }
