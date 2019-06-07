@@ -6,8 +6,6 @@ import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Skills from "./components/Skills/Skills";
 import Portfolio from "./components/Portfolio/Portfolio";
-import CV from "./components/CV/CV";
-import Blog from "./components/Blog/Blog";
 import Contact from "./components/Contact/Contact";
 
 function App() {
@@ -22,8 +20,6 @@ function App() {
           <Route path="/about/" component={About} />
           <Route path="/skills/" component={Skills} />
           <Route path="/portfolio/" component={Portfolio} />
-          <Route path="/cv/" component={CV} />
-          <Route path="/blog/" component={Blog} />
           <Route path="/contact/" component={Contact} />
         </div>
       </div>

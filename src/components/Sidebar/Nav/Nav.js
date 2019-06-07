@@ -20,12 +20,6 @@ function Nav() {
                     <NavLink to="/portfolio/">Portfolio</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/cv/">CV</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/blog/">Blog</NavLink>
-                </li>
-                <li>
                     <NavLink to="/contact/">Contact</NavLink>
                 </li>
             </ul>

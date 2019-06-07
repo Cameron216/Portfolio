@@ -1,3 +1,5 @@
+@import './utils/variables.scss';
+
 body {
     font-family: 'Montserrat Alternates', sans-serif;
 }
@@ -10,4 +12,14 @@ body {
 .mainContent-container{
     width: 100%;
     margin-left: 350px;
+    color: $darkGrey;
+    background-color: $yellowWhite;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-12 {
+    width: 100%;
 }

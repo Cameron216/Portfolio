@@ -1,3 +1,5 @@
+@import './../../../utils/variables.scss';
+
 footer {
     position: absolute;
     bottom: 0;
@@ -9,10 +11,10 @@ footer {
 
         a {
             margin: 0 1em;
-            color: #F5ECD5;
+            color: $yellowWhite;
 
             &:hover {
-                color: #92A784;
+                color: $khaki;
                 
                 svg {
                     transform: scale(1.2, 1.2);
@@ -25,11 +27,12 @@ footer {
     .copyright {
         font-size: 0.7em;
         a {
-            color: #F5ECD5;
+            color: $yellowWhite;
             text-decoration: none;
         
             &:hover {
                 text-decoration: underline;
+                color: $khaki;
             }
         }
         
