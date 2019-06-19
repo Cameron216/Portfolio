@@ -1,4 +1,5 @@
 @import './../../../utils/variables.scss';
+@import './../../../utils/media-mixins.scss';
 
 footer {
     position: absolute;
@@ -21,6 +22,10 @@ footer {
                     transition: transform 0.5s ease;
                 }
             }
+        }
+
+        @include small-devices {
+            font-size: 0.6em;
         }
     }
 

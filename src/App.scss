@@ -1,4 +1,5 @@
 @import './utils/variables.scss';
+@import './utils/media-mixins.scss';
 
 body {
     font-family: 'Montserrat Alternates', sans-serif;
@@ -14,6 +15,10 @@ body {
     margin-left: 350px;
     color: $darkGrey;
     background-color: $yellowWhite;
+
+    @include tablet {
+        margin-left: 0;
+    }
 }
 
 .col-6 {
