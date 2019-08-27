@@ -5,8 +5,6 @@ const sendgridTransport = require('nodemailer-sendgrid-transport');
 const router = express.Router();
 
 router.post('/email', (req, res, next) => {
-    console.log(req.body);
-
     sendEmail(req)
         .then(r => {
             if (r) {
@@ -30,8 +28,7 @@ const sendEmail = (req, res) => {
                 }
             })
         );
-        transporter.sendMail(
-            {
+        transporter.sendMail({
                 to: process.env.EMAIL_RECIPIENT,
                 from: 'portfoilo@dev.com',
                 subject: req.body.subject,

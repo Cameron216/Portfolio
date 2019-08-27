@@ -3,6 +3,18 @@ import axios from 'axios';
 
 import './Contact.scss';
 
+const initialErrorState = {
+    contactFormErrors: {
+        firstnameError: '',
+        lastnameError: '',
+        emailError: '',
+        subjectError: '',
+        messageError: ''
+    },
+    emailSent: 'false',
+    emailSentMessage: ''
+};
+
 export default class Contact extends Component {
     constructor(props) {
         super(props);
@@ -22,7 +34,8 @@ export default class Contact extends Component {
                 subjectError: '',
                 messageError: ''
             },
-            emailSent: false
+            emailSent: false,
+            emailSentMessage: ''
         };
     }
 
@@ -33,6 +46,7 @@ export default class Contact extends Component {
         currentState[name] = value;
 
         this.setState({ contactForm: currentState });
+        this.validate();
     };
 
     sendEmail = e => {
@@ -43,15 +57,24 @@ export default class Contact extends Component {
             return false;
         }
 
+        this.setState(initialErrorState);
+
         const contact = { ...this.state.contactForm };
 
         axios
             .post('/email', contact)
             .then(res => {
-                if (res.data) {
+                if (res.data === 'success') {
                     this.resetContactForm();
                     this.setState({
-                        emailSent: true
+                        emailSent: true,
+                        emailSentMessage:
+                            'Thank you for contacting me, you should receive a response within 3 working days.'
+                    });
+                } else {
+                    this.setState({
+                        emailSent: false,
+                        emailSentMessage: 'An error occured, please try again.'
                     });
                 }
             })
@@ -73,25 +96,62 @@ export default class Contact extends Component {
     };
 
     validate = () => {
+        let firstnameError = '';
+        let lastnameError = '';
+        let emailError = '';
+        let subjectError = '';
+        let messageError = '';
+
         if (this.state.contactForm.firstname === '') {
-            this.setState({
-                contactFormErrors: {
-                    firstnameError: 'Please enter a first name'
-                }
-            });
+            firstnameError = 'Please enter a first name';
+        }
+
+        if (this.state.contactForm.lastname === '') {
+            lastnameError = 'Please enter a last name';
+        }
+
+        if (this.state.contactForm.email === '') {
+            emailError = 'Please enter a email address';
+        }
+
+        if (this.state.contactForm.subject === '') {
+            subjectError = 'Please enter a subject';
+        }
+
+        if (this.state.contactForm.message === '') {
+            messageError = 'Please enter a message';
+        }
+
+        this.setState({
+            contactFormErrors: {
+                firstnameError,
+                lastnameError,
+                emailError,
+                subjectError,
+                messageError
+            }
+        });
+        if (
+            firstnameError ||
+            lastnameError ||
+            emailError ||
+            subjectError ||
+            messageError
+        ) {
             return false;
         }
+        return true;
     };
 
     render() {
         return (
             <div className="contact-container">
-                {this.state.emailSent && (
-                    <p className="email-sent-confirmation">
-                        Thank you for contacting me, you should receive a
-                        response within 3 working days.
-                    </p>
-                )}
+                {(this.state.emailSent && this.state.emailSentMessage) ||
+                    (!this.state.emailSent && this.state.emailSentMessage && (
+                        <p className="email-sent-confirmation">
+                            {this.state.emailSentMessage}
+                        </p>
+                    ))}
 
                 <h1>Get in touch...</h1>
                 <p>
@@ -122,9 +182,15 @@ export default class Contact extends Component {
                             >
                                 Firstname
                             </label>
-                            <div className="form-errors">
-                                {this.state.contactFormErrors.firstnameError}
-                            </div>
+
+                            {this.state.contactFormErrors.firstnameError && (
+                                <div className="form-errors">
+                                    {
+                                        this.state.contactFormErrors
+                                            .firstnameError
+                                    }
+                                </div>
+                            )}
                         </div>
                         <div className="contact-inputs col-6">
                             <input
@@ -144,6 +210,12 @@ export default class Contact extends Component {
                             >
                                 Lastname
                             </label>
+
+                            {this.state.contactFormErrors.lastnameError && (
+                                <div className="form-errors">
+                                    {this.state.contactFormErrors.lastnameError}
+                                </div>
+                            )}
                         </div>
                     </div>
                     <div className="contact-inputs col-12">
@@ -164,6 +236,12 @@ export default class Contact extends Component {
                         >
                             Email
                         </label>
+
+                        {this.state.contactFormErrors.emailError && (
+                            <div className="form-errors">
+                                {this.state.contactFormErrors.emailError}
+                            </div>
+                        )}
                     </div>
                     <div className="contact-inputs col-12">
                         <input
@@ -183,6 +261,12 @@ export default class Contact extends Component {
                         >
                             Subject
                         </label>
+
+                        {this.state.contactFormErrors.subjectError && (
+                            <div className="form-errors">
+                                {this.state.contactFormErrors.subjectError}
+                            </div>
+                        )}
                     </div>
                     <div className="contact-inputs col-12">
                         <textarea
@@ -202,6 +286,12 @@ export default class Contact extends Component {
                         >
                             Message:
                         </label>
+
+                        {this.state.contactFormErrors.messageError && (
+                            <div className="form-errors">
+                                {this.state.contactFormErrors.messageError}
+                            </div>
+                        )}
                     </div>
                     <button type="submit" className="sendBtn">
                         Send
