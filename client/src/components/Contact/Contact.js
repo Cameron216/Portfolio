@@ -8,40 +8,68 @@ export default class Contact extends Component {
         super(props);
 
         this.state = {
-            firstname: '',
-            lastname: '',
-            email: '',
-            subject: '',
-            message: '',
+            contactForm: {
+                firstname: '',
+                lastname: '',
+                email: '',
+                subject: '',
+                message: ''
+            },
+            emailSent: false
         };
     }
 
     onInput = e => {
-        this.setState({
-            [e.target.name]: e.target.value,
-        });
+        const { contactForm } = { ...this.state };
+        const currentState = contactForm;
+        const { name, value } = e.target;
+        currentState[name] = value;
+
+        this.setState({ contactForm: currentState });
     };
 
     sendEmail = e => {
         e.preventDefault();
-        console.log('hello');
 
-        const contact = { ...this.state };
-        console.log(contact);
+        const contact = { ...this.state.contactForm };
 
         axios
             .post('/email', contact)
             .then(res => {
-                console.log(res.data);
+                if (res.data) {
+                    this.resetContactForm();
+                    this.setState({
+                        emailSent: true
+                    });
+                }
             })
             .catch(err => {
                 console.log(err);
             });
     };
 
+    resetContactForm = () => {
+        this.setState({
+            contactForm: {
+                firstname: '',
+                lastname: '',
+                email: '',
+                subject: '',
+                message: ''
+            }
+        });
+    };
+
     render() {
         return (
             <div className="contact-container">
+                {this.state.emailSent && (
+                    <p className="email-sent-confirmation">
+                        Thank you for contacting me, you should receive a
+                        response within 3 working days.
+                    </p>
+                )}
+
                 <h1>Get in touch...</h1>
                 <p>
                     Please use the form below if you would like to get in touch
@@ -58,13 +86,15 @@ export default class Contact extends Component {
                                 type="text"
                                 id="firstname"
                                 name="firstname"
-                                value={this.state.firstname}
+                                value={this.state.contactForm.firstname}
                                 onChange={this.onInput}
                             />
                             <label
                                 htmlFor="firstname"
                                 className={
-                                    this.state.firstname !== '' ? 'active' : ''
+                                    this.state.contactForm.firstname !== ''
+                                        ? 'active'
+                                        : ''
                                 }
                             >
                                 Firstname
@@ -75,13 +105,15 @@ export default class Contact extends Component {
                                 type="text"
                                 id="lastname"
                                 name="lastname"
-                                value={this.state.lastname}
+                                value={this.state.contactForm.lastname}
                                 onChange={this.onInput}
                             />
                             <label
                                 htmlFor="lastname"
                                 className={
-                                    this.state.lastname !== '' ? 'active' : ''
+                                    this.state.contactForm.lastname !== ''
+                                        ? 'active'
+                                        : ''
                                 }
                             >
                                 Lastname
@@ -93,12 +125,16 @@ export default class Contact extends Component {
                             type="email"
                             id="email"
                             name="email"
-                            value={this.state.email}
+                            value={this.state.contactForm.email}
                             onChange={this.onInput}
                         />
                         <label
                             htmlFor="email"
-                            className={this.state.email !== '' ? 'active' : ''}
+                            className={
+                                this.state.contactForm.email !== ''
+                                    ? 'active'
+                                    : ''
+                            }
                         >
                             Email
                         </label>
@@ -108,13 +144,15 @@ export default class Contact extends Component {
                             type="text"
                             id="subject"
                             name="subject"
-                            value={this.state.subject}
+                            value={this.state.contactForm.subject}
                             onChange={this.onInput}
                         />
                         <label
                             htmlFor="subject"
                             className={
-                                this.state.subject !== '' ? 'active' : ''
+                                this.state.contactForm.subject !== ''
+                                    ? 'active'
+                                    : ''
                             }
                         >
                             Subject
@@ -125,13 +163,15 @@ export default class Contact extends Component {
                             type="text"
                             id="message"
                             name="message"
-                            value={this.state.message}
+                            value={this.state.contactForm.message}
                             onChange={this.onInput}
                         />
                         <label
                             htmlFor="message"
                             className={
-                                this.state.message !== '' ? 'active' : ''
+                                this.state.contactForm.message !== ''
+                                    ? 'active'
+                                    : ''
                             }
                         >
                             Message:
