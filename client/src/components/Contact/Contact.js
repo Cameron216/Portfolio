@@ -15,6 +15,13 @@ export default class Contact extends Component {
                 subject: '',
                 message: ''
             },
+            contactFormErrors: {
+                firstnameError: '',
+                lastnameError: '',
+                emailError: '',
+                subjectError: '',
+                messageError: ''
+            },
             emailSent: false
         };
     }
@@ -30,6 +37,11 @@ export default class Contact extends Component {
 
     sendEmail = e => {
         e.preventDefault();
+
+        let isValid = this.validate();
+        if (!isValid) {
+            return false;
+        }
 
         const contact = { ...this.state.contactForm };
 
@@ -58,6 +70,17 @@ export default class Contact extends Component {
                 message: ''
             }
         });
+    };
+
+    validate = () => {
+        if (this.state.contactForm.firstname === '') {
+            this.setState({
+                contactFormErrors: {
+                    firstnameError: 'Please enter a first name'
+                }
+            });
+            return false;
+        }
     };
 
     render() {
@@ -99,6 +122,9 @@ export default class Contact extends Component {
                             >
                                 Firstname
                             </label>
+                            <div className="form-errors">
+                                {this.state.contactFormErrors.firstnameError}
+                            </div>
                         </div>
                         <div className="contact-inputs col-6">
                             <input

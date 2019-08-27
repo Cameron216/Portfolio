@@ -111,6 +111,11 @@
                 color: $darkGrey;
             }
         }
+
+        .form-errors {
+            color: #F82626;
+            margin-top: 4px;
+        }
     }
 
     @include small-devices {
