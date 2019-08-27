@@ -1,0 +1,25 @@
+// Media query mixins
+
+@mixin small-devices {
+    @media (max-width: 376px) {
+        @content;
+    }
+}
+
+@mixin large-phones {
+    @media (max-width: 450px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin large-devices {
+    @media (min-width: 769px) {
+        @content;
+    }
+}

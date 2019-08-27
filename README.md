@@ -4,6 +4,6 @@ This is a new version of my online portfolio which is currently under developmen
 
 ## ToDo:
 
-* 
-* 
-* 
+-
+-
+-

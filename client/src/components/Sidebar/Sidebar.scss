@@ -1,0 +1,118 @@
+@import "../../utils/variables.scss";
+@import "../../utils/media-mixins.scss";
+
+#sidebar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 350px;
+    min-height: 100vh;
+    color: $yellowWhite;
+    background-color: #3E3B42;
+    text-align: center;
+    z-index: 1000;
+
+    #sidebar-icon {
+        display: none;
+        position: absolute;
+        right: -40px;  
+        width: 40px;
+        padding: 6px 10px;
+        background-color: $darkGrey;
+        border: 1px solid $darkGrey;
+
+        &:hover {
+            border: 1px solid $yellowWhite;
+        }
+
+        @include tablet {
+            display: inline-block;
+        }
+    }
+
+    #sidebar-icon span {
+        display: block;
+        width: 20px;
+        height: 4px;
+        background-color: $yellowWhite;
+        margin: 4px 0;
+    }
+
+    #profile-picture {
+        display: block;
+        width: 120px;
+        height: 120px;
+        margin: 40px auto 0 auto;
+        border-radius: 50%;
+        box-shadow: 0 6px 8px 1px $yellowWhite;
+
+        @include small-devices {
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    .sidebar-header {
+        font-size: 1.85em;
+        font-weight: 700;
+
+        @include small-devices {
+            font-size: 1.5em;
+        }
+    }
+
+    .sidebar-subheader { 
+        font-size: 1.25em;
+        margin-top: -1.4em;
+
+        @include small-devices {
+            font-size: 1.1em;
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 48vh;
+        left: 350px;
+        width: 0;
+        height: 0;
+        border-bottom: 18px solid transparent;
+        border-left: 18px solid $darkGrey;
+        border-top: 18px solid transparent;
+        clear: both;
+
+        @include small-devices {
+            left: 230px;
+        }
+    }
+
+    @include small-devices {
+        width: 230px;
+    }
+
+    @include tablet {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    @include large-devices {
+        //transform: translateX(-100%);
+    }
+}
+
+.backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(62, 59, 66, 0.5);
+    z-index: 1000;
+
+    @include large-devices {
+        display: none;
+    }
+}
+
+.open {
+    width: 200px;
+}
