@@ -28,7 +28,8 @@ const sendEmail = (req, res) => {
                 }
             })
         );
-        transporter.sendMail({
+        transporter.sendMail(
+            {
                 to: process.env.EMAIL_RECIPIENT,
                 from: 'portfoilo@dev.com',
                 subject: req.body.subject,

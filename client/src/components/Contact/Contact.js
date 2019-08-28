@@ -44,20 +44,57 @@ export default class Contact extends Component {
         const currentState = contactForm;
         const { name, value } = e.target;
         currentState[name] = value;
-
+        console.log(name, value);
         this.setState({ contactForm: currentState });
-        this.validate();
+        // this.validate();
+
+        if (name === 'firstname' && !this.state.firstname) {
+            this.setState({
+                contactFormErrors: {
+                    ...this.state.contactFormErrors,
+                    firstnameError: ''
+                }
+            });
+        } else if (name === 'lastname' && !this.state.lastname) {
+            this.setState({
+                contactFormErrors: {
+                    ...this.state.contactFormErrors,
+                    lastnameError: ''
+                }
+            });
+        } else if (name === 'email' && !this.state.email) {
+            this.setState({
+                contactFormErrors: {
+                    ...this.state.contactFormErrors,
+                    emailError: ''
+                }
+            });
+        } else if (name === 'subject' && !this.state.subject) {
+            this.setState({
+                contactFormErrors: {
+                    ...this.state.contactFormErrors,
+                    subjectError: ''
+                }
+            });
+        } else if (name === 'message' && !this.state.message) {
+            this.setState({
+                contactFormErrors: {
+                    ...this.state.contactFormErrors,
+                    messageError: ''
+                }
+            });
+        }
     };
 
     sendEmail = e => {
         e.preventDefault();
 
+        this.setState(initialErrorState);
+
         let isValid = this.validate();
         if (!isValid) {
             return false;
         }
-
-        this.setState(initialErrorState);
 
         const contact = { ...this.state.contactForm };
 
@@ -146,12 +183,12 @@ export default class Contact extends Component {
     render() {
         return (
             <div className="contact-container">
-                {(this.state.emailSent && this.state.emailSentMessage) ||
-                    (!this.state.emailSent && this.state.emailSentMessage && (
-                        <p className="email-sent-confirmation">
-                            {this.state.emailSentMessage}
-                        </p>
-                    ))}
+                {((this.state.emailSent && this.state.emailSentMessage) ||
+                    (!this.state.emailSent && this.state.emailSentMessage)) && (
+                    <p className="email-sent-confirmation">
+                        {this.state.emailSentMessage}
+                    </p>
+                )}
 
                 <h1>Get in touch...</h1>
                 <p>
