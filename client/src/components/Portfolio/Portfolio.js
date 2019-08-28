@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-import './Portfolio.scss'
+import './Portfolio.scss';
 
 export default function Portfolio() {
     return (
@@ -9,5 +9,5 @@ export default function Portfolio() {
 
             <h1>Personal Projects</h1>
         </div>
-    )
+    );
 }

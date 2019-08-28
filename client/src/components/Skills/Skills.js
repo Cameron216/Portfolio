@@ -1,9 +1,13 @@
 import React from 'react';
 
-import './Skills.scss'
+import './Skills.scss';
 
 export default function Skills() {
     return (
-        <h1>Skills page</h1>
-    )
+        <div className="skills-container">
+            <h1>Skills page</h1>
+
+            <p>my skills</p>
+        </div>
+    );
 }

@@ -15,7 +15,7 @@
     #sidebar-icon {
         display: none;
         position: absolute;
-        right: -40px;  
+        right: -40px;
         width: 40px;
         padding: 6px 10px;
         background-color: $darkGrey;
@@ -61,8 +61,8 @@
         }
     }
 
-    .sidebar-subheader { 
-        font-size: 1.25em;
+    .sidebar-subheader {
+        font-size: 1.35em;
         margin-top: -1.4em;
 
         @include small-devices {

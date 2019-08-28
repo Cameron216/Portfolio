@@ -46,7 +46,6 @@ export default class Contact extends Component {
         currentState[name] = value;
         console.log(name, value);
         this.setState({ contactForm: currentState });
-        // this.validate();
 
         if (name === 'firstname' && !this.state.firstname) {
             this.setState({
