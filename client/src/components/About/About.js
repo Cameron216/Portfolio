@@ -14,7 +14,7 @@ export default function About() {
                 and IT and since then I haven't stopped. For the last 3 years
                 since completing my degree I have been working as a developer
                 for an insurance company where I maintain and build travel and
-                Home insurance websites.
+                home insurance websites.
             </p>
             <p>
                 I started out as a front-end developer but over the last year I
@@ -25,10 +25,7 @@ export default function About() {
                 preferred tools if I was to build a website outside of my
                 current job role.
             </p>
-            <p>
-                I aim to please by produing work to the highest quality. My
-                biggest hate is having bugs come back from testing so I pay{' '}
-            </p>
+            <p>I aim to please by producing work to the highest quality.</p>
             <p>
                 When I'm not working I can be found spending time with the
                 family or working out in the gym. I am also an MMO lover but i

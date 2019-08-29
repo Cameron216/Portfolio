@@ -5,7 +5,7 @@ import './Skills.scss';
 export default function Skills() {
     return (
         <div className="skills-container">
-            <h1>Skills page</h1>
+            <h1>Some of the skills i have</h1>
 
             <p>my skills</p>
         </div>
