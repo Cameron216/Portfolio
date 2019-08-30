@@ -1,8 +1,23 @@
+@import "./../../../utils/variables.scss";
+@import "./../../../utils/media-mixins.scss";
+
 .portfolio-item {
     margin: 0 0.6em 1em 0.6em;
     width: 300px;
     height: 400px;
     overflow: hidden;
+    position: relative;
+    -webkit-box-shadow: 0 0 20px rgba(3, 3, 3, .4);
+    box-shadow: 0 0 20px rgba(3, 3, 3, .4);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    &:hover {
+        -webkit-box-shadow: 0 0 20px $darkGrey;
+        box-shadow: 0 0 20px $darkGrey;
+    }
 
     img {
         overflow: hidden;
@@ -10,10 +25,69 @@
         -webkit-transition: all 1s ease;
         -webkit-transition: all 1s ease;
         transition: all 1s ease;
+
+        &:hover {
+            -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+        }
     }
 
-    img:hover {
-        -webkit-transform: scale(1.2);
-        transform: scale(1.2);
+    .portfolio-item__overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: inline-block;
+        border-style: solid;
+        border-width: 80px 0 0 300px;
+        border-color: transparent transparent transparent $darkGreyRBGA;
+
+        svg {
+            position: absolute;
+            right: 250px;
+            bottom: 20px;
+            font-size: 1.4em;
+            color: $yellowWhite;
+
+            &:hover {
+                color: $khaki;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .portfolio-item__name {
+        position: absolute;
+        display: none;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: auto;
+        background-color: $darkGreyRBGA;
+
+        p {
+            margin: 0;
+            padding: 4px;
+            color: $yellowWhite;
+            font-size: 1.1em;
+        }
+    }
+
+    &:hover .portfolio-item__name {
+        display: block;
+        width: 80%;
+    }
+
+    .disabled {
+        svg {
+            &:hover {
+                color: red;
+                cursor: not-allowed;
+            }
+        }
+    }
+
+    @include laptops {
+        width: 270px;
+        height: 360px;
     }
 }

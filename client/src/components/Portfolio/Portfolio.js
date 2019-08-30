@@ -7,7 +7,8 @@ import Projects from './projects';
 export default function Portfolio() {
     return (
         <div className="portfolio-container">
-            <h1>Some of my work</h1>
+            <h1>My work</h1>
+            <p>Below are some of the projects that I have been a part of.</p>
 
             <div className="portfolio-items-container">
                 {Projects.workProjects.map((project, index) => (

@@ -2,7 +2,7 @@ import React from 'react';
 
 import './Skills.scss';
 
-export default function Skills() {
+const Skills = () => {
     return (
         <div className="skills-container">
             <h1>Some of the skills i have</h1>
@@ -10,4 +10,6 @@ export default function Skills() {
             <p>my skills</p>
         </div>
     );
-}
+};
+
+export default Skills;

@@ -13,39 +13,61 @@ const calculatorImage = require('./../../assets/images/calculator.png');
 const workProjects = [
     {
         title: 'Sanisburys Travel',
-        imgLocation: sainsburysImage
+        imgLocation: sainsburysImage,
+        siteLink: 'https://www.insurance-sainsburysbank.co.uk/',
+        disabled: false
     },
     {
         title: 'The Military Mutual',
-        imgLocation: tmmImage
+        imgLocation: tmmImage,
+        siteLink: 'https://home.themilitarymutual.com/',
+        disabled: false
     },
     {
         title: 'Select & Protect Insurance',
-        imgLocation: selectAndProtetImage
+        imgLocation: selectAndProtetImage,
+        siteLink: 'https://selectprotect.brokerplatform.co.uk/',
+        disabled: false
     },
     {
         title: 'the West Brom Home Insurance',
-        imgLocation: theWestBromImage
+        imgLocation: theWestBromImage,
+        siteLink:
+            'https://wbhood-insurance.co.uk/RSA_Customer_Sales_Websites/servletcontroller',
+        disabled: false
     },
     {
         title: 'Asda Home Insurance',
-        imgLocation: asdaHomeImage
+        imgLocation: asdaHomeImage,
+        siteLink:
+            'https://home-insurance.asda.com/HomeInsurance/servletcontroller',
+        disabled: false
     },
     {
         title: 'Asda Renters Insurance',
-        imgLocation: asdaRentersImage
+        imgLocation: asdaRentersImage,
+        siteLink: null,
+        disabled: true
     },
     {
         title: 'Benenden Home Insurance',
-        imgLocation: benendenImage
+        imgLocation: benendenImage,
+        siteLink: 'https://quote.benendenhome.co.uk/quote/your-details',
+        disabled: false
     },
     {
         title: 'Market Harborough Home Insurance',
-        imgLocation: marketHarboroughImage
+        imgLocation: marketHarboroughImage,
+        siteLink:
+            'https://direct-mhbs.brokerplatform.co.uk/quote/your-details.aspx',
+        disabled: false
     },
     {
-        title: 'Cambridge Lettings Insurance',
-        imgLocation: cambridgeLettingsImage
+        title: 'Cambridge Insurance',
+        imgLocation: cambridgeLettingsImage,
+        siteLink:
+            'https://direct-cambridge.brokerplatform.co.uk/quote/your-details.aspx',
+        disabled: false
     }
 ];
 
