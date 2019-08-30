@@ -5,11 +5,8 @@
     padding-top: 5px;
     margin: 5px;
     width: 24%;
+    min-width: 250px;
     text-align: center;
-
-    &:hover + .skill-item__icon svg {
-        color: red;
-    }
 
     .skill-item__icon {
         margin-top: 10px;
@@ -24,6 +21,11 @@
             border-radius: 50%;
             padding: 10px;
         }
+    }
+
+    &:hover .skill-item__icon svg {
+        color: $darkGrey;
+        background-color: $khaki;
     }
 
     .skill-item__name {

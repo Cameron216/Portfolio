@@ -6,17 +6,8 @@ import SkillItem from './SkillItem/SkillItem';
 const Skills = () => {
     return (
         <div className="skills-container">
-            <h1>Some of the skills i have</h1>
+            <h1>My core skills</h1>
 
-            <p>MySQL</p>
-            <p>ASP.NET, ASP.NET Core</p>
-            <p>Git, Bitbucket, Github</p>
-            <p>Agile (Scrum & Kanban)</p>
-            <p>Azure (cloud architecture)</p>
-            <p>Jira (Work management)</p>
-            <p></p>
-            <p></p>
-            <p></p>
             <div className="skill-item-container">
                 <SkillItem
                     icon="FaHtml5"
@@ -38,8 +29,36 @@ const Skills = () => {
                     name="MySQL"
                     description="Persistent storage"
                 />
-                <SkillItem icon="FaHtml5" name="Html5" description="Code" />
-                <SkillItem icon="FaHtml5" name="Html5" description="Code" />
+                <SkillItem
+                    icon="FaCode"
+                    name="ASP.NET"
+                    description="C#, Core, Api"
+                />
+                <SkillItem
+                    icon="FaCode"
+                    name="Design patterns"
+                    description="MVC, Functional"
+                />
+                <SkillItem
+                    icon="FaGitAlt"
+                    name="Source control"
+                    description="Git, Bitbucket, GitHub"
+                />
+                <SkillItem
+                    icon="FaServer"
+                    name="Azure"
+                    description="Cloud architecture"
+                />
+                <SkillItem
+                    icon="FaGitAlt"
+                    name="Agile"
+                    description="Scrum, Kanban"
+                />
+                <SkillItem
+                    icon="FaGitAlt"
+                    name="Work managetment"
+                    description="Jira"
+                />
             </div>
         </div>
     );

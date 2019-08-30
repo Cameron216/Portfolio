@@ -1,5 +1,13 @@
 import React from 'react';
-import { FaHtml5, FaCode, FaCss3, FaReact, FaDatabase } from 'react-icons/fa';
+import {
+    FaHtml5,
+    FaCode,
+    FaCss3,
+    FaReact,
+    FaDatabase,
+    FaGitAlt,
+    FaServer
+} from 'react-icons/fa';
 
 import './SkillItem.scss';
 
@@ -19,6 +27,12 @@ const iconSelect = iconName => {
             break;
         case 'FaDatabase':
             return <FaDatabase />;
+            break;
+        case 'FaGitAlt':
+            return <FaGitAlt />;
+            break;
+        case 'FaServer':
+            return <FaServer />;
             break;
         default:
             return <FaCode />;

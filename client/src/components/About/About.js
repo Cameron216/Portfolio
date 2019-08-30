@@ -28,7 +28,7 @@ export default function About() {
             <p>I aim to please by producing work to the highest quality.</p>
             <p>
                 When I'm not working I can be found spending time with the
-                family or working out in the gym. I am also an MMO lover but i
+                family or working out in the gym. I am also an MMO lover but I
                 don't get too much time for that these days.
             </p>
         </div>
