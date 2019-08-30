@@ -8,7 +8,7 @@
     width: 350px;
     min-height: 100vh;
     color: $yellowWhite;
-    background-color: #3E3B42;
+    background-color: $darkGrey;
     text-align: center;
     z-index: 1000;
 
@@ -44,7 +44,8 @@
         height: 120px;
         margin: 40px auto 0 auto;
         border-radius: 50%;
-        box-shadow: 0 6px 8px 1px $yellowWhite;
+        -webkit-box-shadow: 0 6px 8px 1px $yellowWhite;
+                box-shadow: 0 6px 8px 1px $yellowWhite;
 
         @include small-devices {
             width: 100px;
@@ -92,8 +93,12 @@
     }
 
     @include tablet {
-        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
+        -webkit-transition: -webkit-transform 0.3s ease-in;
+        transition: -webkit-transform 0.3s ease-in;
         transition: transform 0.3s ease-in;
+        transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
     }
 
     @include large-devices {

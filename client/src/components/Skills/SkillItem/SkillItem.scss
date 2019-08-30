@@ -1,0 +1,38 @@
+@import './../../../utils/variables.scss';
+
+.skill-item {
+    background-color: white;
+    padding-top: 5px;
+    margin: 5px;
+    width: 24%;
+    text-align: center;
+
+    &:hover + .skill-item__icon svg {
+        color: red;
+    }
+
+    .skill-item__icon {
+        margin-top: 10px;
+
+        svg {
+            color: $darkGrey;
+            background-color: rgba(221, 221, 221, 1);
+            color: #fff;
+            line-height: 2;
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            padding: 10px;
+        }
+    }
+
+    .skill-item__name {
+        font-size: 1.3em;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .skill-item__description {
+        font-size: 1em;
+    }
+}
