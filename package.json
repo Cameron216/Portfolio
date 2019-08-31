@@ -10,7 +10,7 @@
         "build": "cd client && npm run build",
         "test": "echo \"Error: no test specified\" && exit 1",
         "setup": "npm i && cd client && npm i",
-        "start": "node app.js",
+        "start": "node server/app.js",
         "heroku-postbuild": "cd client && npm install && npm run build"
     },
     "repository": {
