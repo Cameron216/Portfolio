@@ -6,7 +6,11 @@ import {
     FaReact,
     FaDatabase,
     FaGitAlt,
-    FaServer
+    FaServer,
+    FaLayerGroup,
+    FaTasks,
+    FaChalkboardTeacher,
+    FaAddressCard
 } from 'react-icons/fa';
 
 import './SkillItem.scss';
@@ -33,6 +37,18 @@ const iconSelect = iconName => {
             break;
         case 'FaServer':
             return <FaServer />;
+            break;
+        case 'FaLayerGroup':
+            return <FaLayerGroup />;
+            break;
+        case 'FaTasks':
+            return <FaTasks />;
+            break;
+        case 'FaChalkboardTeacher':
+            return <FaChalkboardTeacher />;
+            break;
+        case 'FaAddressCard':
+            return <FaAddressCard />;
             break;
         default:
             return <FaCode />;

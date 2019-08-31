@@ -8,6 +8,11 @@ const Skills = () => {
         <div className="skills-container">
             <h1>My core skills</h1>
 
+            <p>
+                Below are some of the main skills I've picked up over my years
+                as a developer.
+            </p>
+
             <div className="skill-item-container">
                 <SkillItem
                     icon="FaHtml5"
@@ -35,9 +40,9 @@ const Skills = () => {
                     description="C#, Core, Api"
                 />
                 <SkillItem
-                    icon="FaCode"
+                    icon="FaLayerGroup"
                     name="Design patterns"
-                    description="MVC, Functional"
+                    description="MVC"
                 />
                 <SkillItem
                     icon="FaGitAlt"
@@ -50,13 +55,18 @@ const Skills = () => {
                     description="Cloud architecture"
                 />
                 <SkillItem
-                    icon="FaGitAlt"
+                    icon="FaAddressCard"
+                    name="CMS"
+                    description="Umbraco, Webpack"
+                />
+                <SkillItem
+                    icon="FaChalkboardTeacher"
                     name="Agile"
                     description="Scrum, Kanban"
                 />
                 <SkillItem
-                    icon="FaGitAlt"
-                    name="Work managetment"
+                    icon="FaTasks"
+                    name="Work management"
                     description="Jira"
                 />
             </div>
