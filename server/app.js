@@ -13,15 +13,16 @@ const contactRoutes = require('./routes/contact');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use(contactRoutes);
-console.log(__dirname);
-if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname, '../client/build')));
+app.use(express.static(path.join(__dirname, '../client/build')));
 
-    app.use('*', (req, res) => {
-        res.sendfile(path.join((__dirname = '../client/build/index.html')));
-    });
-}
+app.use(contactRoutes);
+
+// if (process.env.NODE_ENV === 'production') {
+// }
+
+app.get('*', (req, res, next) => {
+    res.sendfile(path.join((__dirname = '../client/build/index.html')));
+});
 
 app.use((req, res, next) => {
     res.status(404).send('Page not found!');

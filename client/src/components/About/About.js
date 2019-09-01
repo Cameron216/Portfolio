@@ -25,8 +25,10 @@ export default function About() {
                 preferred tools if I was to build a website outside of my
                 current job role.
             </p>
-            <p>I aim to please by producing work to the highest quality</p>
-            <p>Project lifecycle</p>
+            <p>
+                During my time as a developer I have been involed with multiple
+                projects from start to finish.
+            </p>
             <p>
                 When I'm not working I can be found spending time with the
                 family or working out in the gym. I am also an MMO lover but I
