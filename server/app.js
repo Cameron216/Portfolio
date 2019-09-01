@@ -17,9 +17,6 @@ app.use(express.static(path.join(__dirname, '../client/build')));
 
 app.use(contactRoutes);
 
-// if (process.env.NODE_ENV === 'production') {
-// }
-
 app.get('*', (req, res, next) => {
     res.sendfile(path.join((__dirname = '../client/build/index.html')));
 });
