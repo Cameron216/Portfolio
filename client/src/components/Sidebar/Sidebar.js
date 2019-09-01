@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Sidebar.scss';
-import ProfilePic from './../../assets/images/profile-pic.png';
+import ProfilePic from './../../assets/images/profile-pic.jpg';
 import Nav from './Nav/Nav';
 import Backdrop from './Backdrop/Backdrop';
 import Footer from './Footer/Footer';

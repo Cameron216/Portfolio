@@ -40,14 +40,14 @@
 
     #profile-picture {
         display: block;
-        width: 120px;
-        height: 120px;
+        width: 132px;
+        height: 132px;
         margin: 40px auto 0 auto;
         border-radius: 50%;
         -webkit-box-shadow: 0 6px 8px 1px $yellowWhite;
-                box-shadow: 0 6px 8px 1px $yellowWhite;
+        box-shadow: 0 6px 8px 1px $yellowWhite;
 
-        @include small-devices {
+        @include large-phones {
             width: 100px;
             height: 100px;
         }
@@ -57,7 +57,7 @@
         font-size: 1.85em;
         font-weight: 700;
 
-        @include small-devices {
+        @include large-phones {
             font-size: 1.5em;
         }
     }
@@ -66,7 +66,7 @@
         font-size: 1.35em;
         margin-top: -1.4em;
 
-        @include small-devices {
+        @include large-phones {
             font-size: 1.1em;
         }
     }
@@ -83,18 +83,18 @@
         border-top: 18px solid transparent;
         clear: both;
 
-        @include small-devices {
+        @include large-phones {
             left: 230px;
         }
     }
 
-    @include small-devices {
+    @include large-phones {
         width: 230px;
     }
 
     @include tablet {
         -webkit-transform: translateX(-100%);
-                transform: translateX(-100%);
+        transform: translateX(-100%);
         -webkit-transition: -webkit-transform 0.3s ease-in;
         transition: -webkit-transform 0.3s ease-in;
         transition: transform 0.3s ease-in;

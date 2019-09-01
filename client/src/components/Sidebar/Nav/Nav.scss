@@ -1,18 +1,18 @@
 @import './../../../utils/variables.scss';
 @import './../../../utils/media-mixins.scss';
 
-nav{
+nav {
     font-size: 1.2em;
     margin-top: 2.5em;
 
     ul {
         padding: 0;
         text-transform: uppercase;
-        
+
         li {
             list-style-type: none;
             margin: 0 auto 0.6em auto;
-            
+
             a {
                 text-decoration: none;
                 color: inherit;
@@ -22,29 +22,35 @@ nav{
                     display: inline-block;
                     color: $khaki;
                     font-weight: 700;
-                    
+
                     &:after {
-                        display:block;
+                        display: block;
                         content: '';
                         margin: 5px auto 0 auto;
                         width: 50%;
-                        border-bottom: solid 3px $khaki; 
+                        border-bottom: solid 3px $khaki;
+                        -webkit-transform: scaleX(1);
                         transform: scaleX(1);
                     }
                 }
 
                 &:after {
-                    display:block;
+                    display: block;
                     content: '';
                     margin: 5px auto 0 auto;
                     width: 50%;
-                    border-bottom: solid 3px $khaki;  
-                    transform: scaleX(0);  
+                    border-bottom: solid 3px $khaki;
+                    -webkit-transform: scaleX(0);
+                    transform: scaleX(0);
+                    -webkit-transition: -webkit-transform 250ms ease-in-out;
+                    transition: -webkit-transform 250ms ease-in-out;
                     transition: transform 250ms ease-in-out;
+                    transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
                 }
 
-                &:hover{
+                &:hover {
                     &:after {
+                        -webkit-transform: scaleX(1);
                         transform: scaleX(1);
                     }
                 }
@@ -52,7 +58,8 @@ nav{
         }
     }
 
-    @include small-devices {
+    @include large-phones {
         font-size: 1.1em;
+        margin-top: 1em;
     }
 }
