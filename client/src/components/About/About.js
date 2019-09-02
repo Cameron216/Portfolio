@@ -1,19 +1,9 @@
 import React from 'react';
-import axios from 'axios';
 import { FaFileDownload } from 'react-icons/fa';
 
-import './About.scss';
+import cvDoc from './../../assets/docs/cv.pdf';
 
-const downloadCV = () => {
-    // axios
-    //     .get('/cv')
-    //     .then(res => {
-    //         console.log(res);
-    //     })
-    //     .catch(err => {
-    //         console.log(err);
-    //     });
-};
+import './About.scss';
 
 export default function About() {
     return (
@@ -55,15 +45,12 @@ export default function About() {
                     I don't get too much time for that these days.
                 </p>
             </div>
-            <div className="cv-container" onClick={downloadCV()}>
-                <div className="cv">
+            <div className="cv-container">
+                <a href={cvDoc} target="_blank" rel="noopener noreferrer">
                     <FaFileDownload />
-                    <p>Download my CV (kb)</p>
-                </div>
+                    <p>View my CV</p>
+                </a>
             </div>
-            <a href="/static/docs/cv.pdf" target="_blank">
-                cv download
-            </a>
         </div>
     );
 }

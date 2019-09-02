@@ -1,4 +1,5 @@
 @import './../../utils/variables.scss';
+@import './../../utils/media-mixins.scss';
 
 .about-container {
     width: 100%;
@@ -20,7 +21,11 @@
     align-items: flex-start;
 
     .about-profile {
-        width: 75%;
+        width: 72%;
+
+        @include laptops {
+            width: 100%;
+        }
     }
 
     .about-heading {
@@ -38,8 +43,8 @@
         background-color: white;
         padding-top: 12px;
         margin-top: 1em;
-        width: 20%;
-        min-width: 250px;
+        width: 24%;
+        // min-width: 250px;
         height: auto;
         text-align: center;
 
@@ -53,6 +58,14 @@
             padding: 10px;
         }
 
+        a {
+            text-decoration: none;
+            color: $darkGrey;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
         &:hover {
             cursor: pointer;
         }
@@ -60,6 +73,14 @@
         &:hover svg {
             color: $darkGrey;
             background-color: $khaki;
+        }
+
+        @include laptops {
+            width: 30%;
+        }
+
+        @include large-phones {
+            width: 100%;
         }
     }
 }

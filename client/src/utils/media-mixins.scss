@@ -26,6 +26,6 @@
 
 @mixin laptops {
     @media (max-width: 1024px) {
-        @content
+        @content;
     }
 }
