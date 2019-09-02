@@ -24,20 +24,21 @@ export default function About() {
                     I started out as a front-end developer but over the last
                     year I have moved into a developer role where I have taken
                     on more of a fullstack position. The main tech stack at my
-                    current company is HTML, CSS, Javascript, C# and ASP.NET.
-                    However in my spare time I will code using React.js and
-                    Node.js and these would be my preferred tools if I was to
-                    build a website outside of my current job role.
+                    current company is HTML, CSS, Javascript, C# and ASP.NET. I
+                    also have exposure to React.js and Node.js and these would
+                    be my preferred tools if I was to build an application
+                    outside of my current job role.
                 </p>
                 <p>
                     During my time as a developer I have been involved with
                     multiple projects from start to finish. This has meant I
-                    have taken part in all stages of the project lifecycle. From
+                    have taken part in all stages of the project lifecycle; from
                     helping produce requirements, helping turn the requirements
-                    into designs, turning the designs into a fully functional
-                    fullstack app, supporting testing and bug fixing and then
-                    deploying the app to production and maintaining it. And all
-                    this while working in an incremental iterative agile way.
+                    into designs, implementing the designs into a fully
+                    functional fullstack app, supporting testing and bug fixing
+                    and then deploying the app to production and maintaining it.
+                    And all this while working in an incremental iterative agile
+                    way.
                 </p>
                 <p>
                     When I'm not working I can be found spending time with the

@@ -48,6 +48,10 @@ nav {
                     transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
                     transition: transform 250ms ease-in-out,
                         -webkit-transform 250ms ease-in-out;
+                    transition: transform 250ms ease-in-out,
+                        -webkit-transform 250ms ease-in-out;
+                    transition: transform 250ms ease-in-out,
+                        -webkit-transform 250ms ease-in-out;
                 }
 
                 &:hover {
@@ -62,6 +66,5 @@ nav {
 
     @include large-phones {
         font-size: 1.1em;
-        margin-top: 1em;
     }
 }
