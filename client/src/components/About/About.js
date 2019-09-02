@@ -30,15 +30,12 @@ export default function About() {
                     outside of my current job role.
                 </p>
                 <p>
-                    During my time as a developer I have been involved with
-                    multiple projects from start to finish. This has meant I
-                    have taken part in all stages of the project lifecycle; from
-                    helping produce requirements, helping turn the requirements
-                    into designs, implementing the designs into a fully
-                    functional fullstack app, supporting testing and bug fixing
-                    and then deploying the app to production and maintaining it.
-                    And all this while working in an incremental iterative agile
-                    way.
+                    My experience as a Developer has seen me work on the full
+                    life cycle of various projects, from structuring and
+                    documenting initial requirements, to designing, coding,
+                    testing and implementing strategic solutions. I have also,
+                    more recently, taken on an additional role to provide
+                    support for both existing and new applications.
                 </p>
                 <p>
                     When I'm not working I can be found spending time with the
