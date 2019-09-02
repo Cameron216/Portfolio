@@ -1,4 +1,5 @@
 @import './../../../utils/variables.scss';
+@import './../../../utils/media-mixins.scss';
 
 .skill-item {
     background-color: white;
@@ -35,5 +36,9 @@
 
     .skill-item__description {
         font-size: 1em;
+    }
+
+    @include large-phones {
+        width: 100%;
     }
 }
