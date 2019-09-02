@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname, '../client/build')));
 app.use(contactRoutes);
 
 app.get('*', (req, res, next) => {
-    res.sendfile(path.join((__dirname = '../client/build/index.html')));
+    res.sendFile(path.join((__dirname, '../client/build/index.html')));
 });
 
 app.use((req, res, next) => {

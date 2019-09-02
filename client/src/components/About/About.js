@@ -18,7 +18,8 @@ export default function About() {
                     Computing and IT and since then I haven't stopped. For the
                     last 3 years since completing my degree I have been working
                     as a developer for an insurance company where I maintain and
-                    build travel and home insurance applications.
+                    build travel and home insurance applications for a range of
+                    clients.
                 </p>
                 <p>
                     I started out as a front-end developer but over the last
@@ -32,7 +33,10 @@ export default function About() {
                     My experience as a developer has seen me work on the full
                     life cycle of various projects, from structuring and
                     documenting initial requirements, to designing, developing,
-                    testing and implementing strategic solutions.
+                    testing and implementing strategic solutions. I have a
+                    passion for developing clean and robust solutions using
+                    latest technologies and I'm always looking to learn
+                    something new.
                 </p>
                 <p>
                     When I'm not working I can be found spending time with the
