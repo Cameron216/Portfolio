@@ -25,17 +25,14 @@ export default function About() {
                     year I have moved into a developer role where I have taken
                     on more of a fullstack position. The main tech stack at my
                     current company is HTML, CSS, Javascript, C# and ASP.NET. I
-                    also have exposure to React.js and Node.js and these would
-                    be my preferred tools if I was to build an application
-                    outside of my current job role.
+                    also have exposure to React.js and Node.js, which I have
+                    been using in my spare time.
                 </p>
                 <p>
-                    My experience as a Developer has seen me work on the full
+                    My experience as a developer has seen me work on the full
                     life cycle of various projects, from structuring and
-                    documenting initial requirements, to designing, coding,
-                    testing and implementing strategic solutions. I have also,
-                    more recently, taken on an additional role to provide
-                    support for both existing and new applications.
+                    documenting initial requirements, to designing, developing,
+                    testing and implementing strategic solutions.
                 </p>
                 <p>
                     When I'm not working I can be found spending time with the
