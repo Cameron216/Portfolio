@@ -17,6 +17,10 @@ app.use(express.static(path.join(__dirname, '../client/build')));
 
 app.use(contactRoutes);
 
+// app.get('/cv', (req, res, next) => {
+//     res.download(path.join(__dirname, 'docs/cv.doc'));
+// });
+
 app.get('*', (req, res, next) => {
     res.sendfile(path.join((__dirname = '../client/build/index.html')));
 });

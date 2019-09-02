@@ -1,13 +1,65 @@
+@import './../../utils/variables.scss';
+
 .about-container {
     width: 100%;
     padding: 44px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+
+    .about-profile {
+        width: 75%;
+    }
 
     .about-heading {
         margin: 0;
+        display: block;
+        width: 100%;
     }
 
     .about-main-text {
         font-size: 1.25em;
         color: #92a784;
+    }
+
+    .cv-container {
+        background-color: white;
+        padding-top: 12px;
+        margin-top: 1em;
+        width: 20%;
+        min-width: 250px;
+        height: auto;
+        text-align: center;
+
+        svg {
+            background-color: rgba(221, 221, 221, 1);
+            color: #fff;
+            line-height: 2;
+            height: 60px;
+            width: 60px;
+            // border-radius: 50%;
+            padding: 10px;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:hover svg {
+            color: $darkGrey;
+            background-color: $khaki;
+        }
     }
 }
