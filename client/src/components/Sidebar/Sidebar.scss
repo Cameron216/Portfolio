@@ -52,7 +52,7 @@
             height: 100px;
         }
 
-        @include small-phones-landscape {
+        @include phones-landscape {
             display: none;
         }
     }

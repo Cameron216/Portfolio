@@ -31,8 +31,8 @@
 }
 
 /* Landscape */
-@mixin small-phones-landscape {
-    @media screen and (device-width: 480px) and (device-height: 800px) and (orientation: landscape) {
+@mixin phones-landscape {
+    @media screen and (min-width: 320px) and (max-width: 800px) and (orientation: landscape) {
         @content;
     }
 }
