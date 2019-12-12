@@ -52,22 +52,20 @@ const workProjects = [
     {
         title: 'Benenden Home Insurance',
         imgLocation: benendenImage,
-        siteLink: 'https://quote.benendenhome.co.uk/quote/your-details',
-        disabled: false
+        siteLink: null,
+        disabled: true
     },
     {
         title: 'Market Harborough Home Insurance',
         imgLocation: marketHarboroughImage,
-        siteLink:
-            'https://direct-mhbs.brokerplatform.co.uk/quote/your-details.aspx',
-        disabled: false
+        siteLink: null,
+        disabled: true
     },
     {
         title: 'Cambridge Insurance',
         imgLocation: cambridgeLettingsImage,
-        siteLink:
-            'https://direct-cambridge.brokerplatform.co.uk/quote/your-details.aspx',
-        disabled: false
+        siteLink: null,
+        disabled: true
     }
 ];
 
