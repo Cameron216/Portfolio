@@ -31,8 +31,8 @@ const Skills = () => {
                 />
                 <SkillItem
                     icon="FaDatabase"
-                    name="MySQL"
-                    description="Persistent storage"
+                    name="Persistent storage"
+                    description="MySQL, MongoDB"
                 />
                 <SkillItem
                     icon="FaCode"
@@ -42,7 +42,7 @@ const Skills = () => {
                 <SkillItem
                     icon="FaLayerGroup"
                     name="Design patterns"
-                    description="MVC"
+                    description="MVC, Functional"
                 />
                 <SkillItem
                     icon="FaGitAlt"
@@ -57,7 +57,7 @@ const Skills = () => {
                 <SkillItem
                     icon="FaAddressCard"
                     name="CMS"
-                    description="Umbraco, Webpack"
+                    description="Umbraco, Episever"
                 />
                 <SkillItem
                     icon="FaChalkboardTeacher"
@@ -67,7 +67,7 @@ const Skills = () => {
                 <SkillItem
                     icon="FaTasks"
                     name="Work management"
-                    description="Jira"
+                    description="Jira, Team Foundation Server"
                 />
             </div>
         </div>
