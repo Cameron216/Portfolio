@@ -11,8 +11,8 @@ export default function Portfolio() {
             <p>Below are some of the projects that I have been a part of</p>
 
             <div className="portfolio-items-container">
-                {Projects.workProjects.map((project, index) => (
-                    <PortfolioItem projects={project} key={index} />
+                {Projects.workProjects.map((project) => (
+                    <PortfolioItem projects={project} key={project.id} />
                 ))}
             </div>
 

@@ -1,3 +1,5 @@
+const uuidv4 = require('uuid/v4');
+
 const sainsburysImage = require('./../../assets/images/sainsburys.png');
 const tmmImage = require('./../../assets/images/tmm.png');
 const selectAndProtetImage = require('./../../assets/images/selectandprotect.png');
@@ -12,24 +14,28 @@ const calculatorImage = require('./../../assets/images/calculator.png');
 
 const workProjects = [
     {
+        id: uuidv4(),
         title: 'Sanisburys Travel',
         imgLocation: sainsburysImage,
         siteLink: 'https://www.insurance-sainsburysbank.co.uk/',
         disabled: false
     },
     {
+        id: uuidv4(),
         title: 'The Military Mutual',
         imgLocation: tmmImage,
         siteLink: 'https://home.themilitarymutual.com/',
         disabled: false
     },
     {
+        id: uuidv4(),
         title: 'Select & Protect Insurance',
         imgLocation: selectAndProtetImage,
         siteLink: 'https://selectprotect.brokerplatform.co.uk/',
         disabled: false
     },
     {
+        id: uuidv4(),
         title: 'the West Brom Home Insurance',
         imgLocation: theWestBromImage,
         siteLink:
@@ -37,6 +43,7 @@ const workProjects = [
         disabled: false
     },
     {
+        id: uuidv4(),
         title: 'Asda Home Insurance',
         imgLocation: asdaHomeImage,
         siteLink:
@@ -44,24 +51,28 @@ const workProjects = [
         disabled: false
     },
     {
+        id: uuidv4(),
         title: 'Asda Renters Insurance',
         imgLocation: asdaRentersImage,
         siteLink: null,
         disabled: true
     },
     {
+        id: uuidv4(),
         title: 'Benenden Home Insurance',
         imgLocation: benendenImage,
         siteLink: null,
         disabled: true
     },
     {
+        id: uuidv4(),
         title: 'Market Harborough Home Insurance',
         imgLocation: marketHarboroughImage,
         siteLink: null,
         disabled: true
     },
     {
+        id: uuidv4(),
         title: 'Cambridge Insurance',
         imgLocation: cambridgeLettingsImage,
         siteLink: null,
