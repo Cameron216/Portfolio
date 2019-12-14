@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-// import { Helmet } from 'react-helmet';
 
 import './App.scss';
 import Sidebar from './components/Sidebar/Sidebar';
@@ -9,8 +8,6 @@ import About from './components/About/About';
 import Skills from './components/Skills/Skills';
 import Portfolio from './components/Portfolio/Portfolio';
 import Contact from './components/Contact/Contact';
-
-// import ogImg from './assets/images/og-card.jpg';
 
 function App() {
     return (
