@@ -16,13 +16,15 @@ function App() {
     return (
         <Router>
             <Helmet>
-                <meta name="twitter:card" content="summary" />
-                <meta
-                    name="twitter:title"
-                    content="Cameron Bailey Web Developer"
-                />
-                <meta name="twitter:description" content="Online portfolio" />
-                <meta name="twitter:image" content={ogImg} />
+            <meta name="twitter:title" content="European Travel Destinations " />
+            <meta name="twitter:description" content=" Offering tour packages for individuals or groups."/>
+            <meta name="twitter:image" content=" http://euro-travel-example.com/thumbnail.jpg" />
+            <meta name="twitter:card" content="summary_large_image" />
+
+                <meta property="og:title" content="European Travel Destinations"/>
+                <meta property="og:description" content="Offering tour packages for individuals or groups."/>
+                <meta property="og:image" content="http://euro-travel-example.com/thumbnail.jpg"/>
+                <meta property="og:url" content="http://euro-travel-example.com/index.htm" />
             </Helmet>
 
             <div className="container">
