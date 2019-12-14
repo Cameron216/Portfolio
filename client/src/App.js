@@ -18,11 +18,11 @@ function App() {
             <Helmet>
                 <meta name="twitter:title" content="Cameron Bailey - Web Developer" />
                 <meta name="twitter:description" content=" Web Developer portfolio"/>
-                <meta name="twitter:image" content={ogImg} />
+                <meta name="twitter:image" content="https://pbs.twimg.com/media/DeZKBWEWsAA9Rng.jpg" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta property="og:title" content="Cameron Bailey - Web Developer"/>
                 <meta property="og:description" content="Web Developer portfolio"/>
-                <meta property="og:image" content={ogImg} />
+                <meta property="og:image" content="https://pbs.twimg.com/media/DeZKBWEWsAA9Rng.jpg" />
                 <meta property="og:url" content="http://www.cameronbailey.co.uk" />
             </Helmet>
 
