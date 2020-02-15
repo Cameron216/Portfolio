@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Helmet } from 'react-helmet';
+import ReactGA from 'react-ga';
 
 import './Contact.scss';
 
@@ -95,6 +97,11 @@ export default class Contact extends Component {
             return false;
         }
 
+        ReactGA.event({
+            category: 'Contact',
+            action: 'Sent an email'
+        });
+
         const contact = { ...this.state.contactForm };
 
         axios
@@ -182,6 +189,9 @@ export default class Contact extends Component {
     render() {
         return (
             <div className="contact-container">
+                <Helmet>
+                    <title>Cameron Bailey || Contact</title>
+                </Helmet>
                 {((this.state.emailSent && this.state.emailSentMessage) ||
                     (!this.state.emailSent && this.state.emailSentMessage)) && (
                     <p className="email-sent-confirmation">

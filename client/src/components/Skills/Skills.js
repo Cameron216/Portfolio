@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import './Skills.scss';
 import SkillItem from './SkillItem/SkillItem';
@@ -6,6 +7,10 @@ import SkillItem from './SkillItem/SkillItem';
 const Skills = () => {
     return (
         <div className="skills-container">
+            <Helmet>
+                <title>Cameron Bailey || Skills</title>
+            </Helmet>
+
             <h1>My core skills</h1>
 
             <p>

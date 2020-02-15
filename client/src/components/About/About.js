@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { FaFileDownload } from 'react-icons/fa';
 
 import cvDoc from './../../assets/docs/cv.pdf';
@@ -8,6 +9,10 @@ import './About.scss';
 export default function About() {
     return (
         <div className="about-container">
+            <Helmet>
+                <title>Cameron Bailey || About</title>
+            </Helmet>
+
             <h1 className="about-heading">About me</h1>
             <div className="about-profile">
                 <p className="about-main-text">

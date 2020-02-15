@@ -30,8 +30,7 @@
         "dotenv": "^8.1.0",
         "express": "^4.17.1",
         "nodemailer": "^6.3.0",
-        "nodemailer-sendgrid-transport": "^0.2.0",
-        "react-ga": "^2.7.0"
+        "nodemailer-sendgrid-transport": "^0.2.0"
     },
     "devDependencies": {
         "nodemon": "^1.19.1"

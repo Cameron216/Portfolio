@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import ReactGA from 'react-ga';
 
 import './App.scss';
@@ -10,13 +11,16 @@ import Skills from './components/Skills/Skills';
 import Portfolio from './components/Portfolio/Portfolio';
 import Contact from './components/Contact/Contact';
 
-const gaTractingId = 'UA-96112620-2';
-ReactGA.initialize(gaTractingId);
-
 function App() {
+    const gaTractingId = 'UA-96112620-2';
+    ReactGA.initialize(gaTractingId);
+    ReactGA.pageview(window.location.pathname + window.location.search);
 
     return (
         <Router>
+            <Helmet>
+                <title>Cameron Bailey || Frontend Developer</title>
+            </Helmet>
             <div className="container">
                 <Sidebar />
 
