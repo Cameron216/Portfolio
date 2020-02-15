@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Router, Route } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
 import { Helmet } from 'react-helmet';
 import ReactGA from 'react-ga';
 
@@ -11,16 +12,23 @@ import Skills from './components/Skills/Skills';
 import Portfolio from './components/Portfolio/Portfolio';
 import Contact from './components/Contact/Contact';
 
+const history = createBrowserHistory();
+
 function App() {
     const gaTractingId = 'UA-96112620-2';
     ReactGA.initialize(gaTractingId);
     ReactGA.pageview(window.location.pathname + window.location.search);
 
+    history.listen(location => {
+        ReactGA.pageview(location.pathname);
+    });
+
     return (
-        <Router>
+        <Router history={history}>
             <Helmet>
                 <title>Cameron Bailey || Frontend Developer</title>
             </Helmet>
+
             <div className="container">
                 <Sidebar />
 
