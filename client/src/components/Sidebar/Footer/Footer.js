@@ -13,13 +13,13 @@ function Footer() {
   return (
     <footer>
       <div className="social-icons">
-        <a href="https://www.linkedin.com/in/cameronsbailey" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/cameronsbailey" aria-label="Linkedin profile" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faLinkedin} size="4x" />
         </a>
-        <a href="https://twitter.com/CameronBailey21" target="_blank" rel="noopener noreferrer">
+        <a href="https://twitter.com/CameronBailey21" aria-label="Twitter profile" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faTwitterSquare} size="4x" />
         </a>
-        <a href="https://github.com/Cameron216" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/Cameron216" aria-label="Github profile" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faGithubSquare} size="4x" />
         </a>
       </div>
